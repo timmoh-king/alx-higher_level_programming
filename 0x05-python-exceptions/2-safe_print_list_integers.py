@@ -6,11 +6,10 @@ def safe_print_list_integers(my_list=[], x=0):
     
     for i in range(x):
         try:
-            newList = [val for val in my_list if isinstance(val, (int, float))]
-            print("{:d}".format(newList[i]), end="")
+            print("{:d}".format(my_list[i]), end="")
             elements += 1
-        except (IndexError, NameError, ValueError, TypeError):
-            break
+        except (ValueError, TypeError):
+            pass
 
     print("")
     return elements
