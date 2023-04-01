@@ -14,13 +14,13 @@ class Square:
 
     @size.setter
     def size(self, value):
-        if not isinstance(self.__size, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif self.__size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            """define the value attribute"""
-            self.__size = value
+
+        """define the value attribute"""
+        self.__size = value
 
     def area(self):
         return (self.__size ** 2)
