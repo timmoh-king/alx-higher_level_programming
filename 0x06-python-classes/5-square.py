@@ -14,13 +14,12 @@ class Square:
 
     @size.setter
     def size(self, value):
-        if not isinstance(self.__size, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif self.__size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            """define the value attribute"""
-            self.__size = value
+
+        self.__size = value
 
     """define the method to calculate area"""
     def area(self):
@@ -28,5 +27,6 @@ class Square:
 
     """define a function to print # on stdout"""
     def my_print(self):
-        if self.__size == 0:
+        for i in range(self.__size):
             print("#")
+        print("")
