@@ -4,6 +4,7 @@
 
 
 class Square:
+    """define the self values"""
     def __init__(self, size=0):
 
         if not isinstance(size, int):
@@ -16,4 +17,4 @@ class Square:
 
     """declare the method to find area"""
     def area(self):
-        return (self.__size * self.__size)
+        return (self.__size ** 2)
