@@ -28,5 +28,6 @@ class Square:
     """define a function to print # on stdout"""
     def my_print(self):
         for i in range(self.__size):
-            print("#")
+            [print("#", end="") for j in range(self.__size)]
+            print("")
         print("")
