@@ -10,16 +10,23 @@ def text_indentation(text):
 
         Args:
             text (str): the text passed
+            split (str): split the buff
+            buff (str): a string
 
         Raises:
             TypeError: if text is not string
 
         Return: prints a text with 2 new lines after each character:
     """
+    buff = ""
+    split =  ""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    for i in range(len(text)):
-        if (text[i] == "." or text[i] == "?" or text[i] == ":"):
-            print("")
-            print("")
-    print(text)
+    for i in text:
+        if i in ".?:":
+            buff += i + '\n\n'
+        else:
+            buff += i
+    split = buff.split('\n')
+    for letter in split:
+        print(letter.strip())
