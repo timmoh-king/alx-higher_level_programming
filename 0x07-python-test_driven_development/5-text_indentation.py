@@ -19,7 +19,7 @@ def text_indentation(text):
         Return: prints a text with 2 new lines after each character:
     """
     buff = ""
-    split =  ""
+    split = ""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     for i in text:
