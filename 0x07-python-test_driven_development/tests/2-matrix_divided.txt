@@ -34,6 +34,11 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
 >>> matrix = [[1, 2, 3], [4, "not a number", 6]]
 >>> print(matrix_divided(matrix, 3))
 Traceback (most recent call last):
@@ -52,3 +57,16 @@ TypeError: div must be a number
 >>> print(matrix_divided(matrix, None))
 Traceback (most recent call last):
 TypeError: div must be a number
+
+>>> print(matrix_divided, float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> print(matrix_divided(matrix))
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 argument div argument: 'div'
+
+>>> print(matrix_divided())
+Traceback (most recent call last):
+TypeError: matrix_divided() takes 2 arguments but 0 were given
