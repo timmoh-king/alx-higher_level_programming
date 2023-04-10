@@ -54,6 +54,6 @@ class Rectangle:
             for column in range(self.__width):
                 string += '#'
 
-            if self.__width != 0 and row < (self.__height -1):
+            if self.__width is not 0 and row < (self.__height -1):
                 string += "\n"
         return string
