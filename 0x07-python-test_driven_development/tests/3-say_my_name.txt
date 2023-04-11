@@ -1,12 +1,12 @@
->>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name = __import__("3-say_my_name").say_my_name
 >>> say_my_name("Timothy", "ALX")
 My name is Timothy ALX
 
 >>> say_my_name("ALX", "SWE")
 My name is ALX SWE
 
->>> say_my_name("ALX")
-My name is ALX
+>>> say_my_name("editing")
+My name is editing
 
 >>> say_my_name(7, "ALX")
 Traceback (most recent call last):
