@@ -14,4 +14,4 @@ def to_json_string(my_str):
         Return:
             obj representation of JSON
     """
-    return json.loads(my_str)
+    return json.load(my_str)
