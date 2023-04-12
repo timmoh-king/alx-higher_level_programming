@@ -4,7 +4,7 @@
 import json
 
 
-def to_json_string(my_str):
+def from_json_string(my_str):
     """
         object representation of an JSON string
 
@@ -14,4 +14,4 @@ def to_json_string(my_str):
         Return:
             obj representation of JSON
     """
-    return json.load(my_str)
+    return json.loads(my_str)
