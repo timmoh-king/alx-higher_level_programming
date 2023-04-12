@@ -5,12 +5,12 @@
 
 def write_file(filename="", text=""):
     """
-        a function that writes a string to a text file
+        a function that writes a string to a text
 
         Args:
             filename(str): name of the file
             text(str): the string to be added
-        
+
         Return:
             the number of characters written
     """
