@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 
-"""returns the JSON representation of an object (string)"""
+"""returns the object representation of an JSON string"""
 import json
 
 
 def to_json_string(my_str):
     """
-        JSON representation of an object (string)
+        object representation of an JSON string
 
         Args:
             my_str(str): the object
 
-        Return: Obj  representation
+        Return:
+            obj representation of JSON
     """
     return json.loads(my_str)
