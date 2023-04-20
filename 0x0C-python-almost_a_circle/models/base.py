@@ -49,8 +49,8 @@ class Base:
         """returns an instance with all attributes already set:"""
         if dictionary and dictionary is not {}:
             if cls.__name__ == "Rectangle":
-                obj = cls(1, 1, 1, 1)
+                obj = cls(1, 1)
             elif cls.__name__ == "Square":
-                obj = cls(1, 1, 1)
+                obj = cls(1)
             obj.update(**dictionary)
             return obj
