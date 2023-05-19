@@ -2,9 +2,9 @@
 -- If a show doesn’t have a genre, display NULL in the genre column
 SELECT `s`.`title`, `t`.`name`
 	FROM `tv_shows` AS `s`
-	INNER JOIN `tv_show_genres` AS `g`
+	LEFT JOIN `tv_show_genres` AS `g`
 		ON  `s`.`id` = `g`.`show_id`
 
-		INNER JOIN `tv_genres` AS `t`
+		LEFT JOIN `tv_genres` AS `t`
 			ON `t`.`id` = `g`.`genre_id`
 	ORDER BY `s`.`title`, `t`.`name` ASC;
