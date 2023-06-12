@@ -7,14 +7,13 @@
  */
 
 const argv = process.argv;
-let results = 0;
+let result = 1;
 
-argv.forEach(function(element){
-	results = results + element;
+argv.forEach((val, index) => {
+  result = result + index;
 });
-
-if (argv < 2) {
-  console.log('No argument');
+if (result <= 2) {
+  console.log('No Argument');
 } else {
   console.log(argv[2]);
 }
