@@ -3,10 +3,10 @@
 /*
  * My number: <first argument converted in integer>
  */
-const argv = process.argv;
+const argv = Math.trunc(Number(process.argv[2]));
 
-if (!argv[2] || !Math.floor(Number(argv[2]))) {
+if (isNaN(argv)) {
   console.log('Not a number');
 } else {
-  console.log(`My number: ${argv[2]}`);
+  console.log(`My number: ${argv}`);
 }
