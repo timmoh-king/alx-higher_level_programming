@@ -3,20 +3,19 @@
 /*
  * Write a class Square that defines a square and inherits from Rectangle of 4-rectangle.js
  */
-const Rectangle = require('./4-rectangle');
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-
+class Square extends require('./5-square') {
   charPrint (c) {
-    if (typeof (c) === 'undefined') {
-      super.print();
-    } else if (c === '') {
+    if (c === 'undefined' || !c) {
       super.print();
     } else {
-      super.charPrint('C');
+      for (let i = 0; i < this.height; i++) {
+        let row = '';
+        for (let j = 0; j < this.height; j++) {
+          row += c;
+        }
+        console.log(row);
+      }
     }
   }
 }
