@@ -4,8 +4,7 @@
  * prints the number of arguments already printed and the new argument value.
  */
 
+let num = 0;
 exports.logMe = function (item) {
-  for (let i = 0; i < item.length; i++) {
-    console.log(`${i} : ${item[i]}`);
-  }
+  console.log(`${num++}: ${item}`);
 };
