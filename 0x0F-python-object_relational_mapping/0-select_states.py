@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import MySQLdb
-import sys
 
 """
 Write a script that lists all states from the database hbtn_0e_0_usa
