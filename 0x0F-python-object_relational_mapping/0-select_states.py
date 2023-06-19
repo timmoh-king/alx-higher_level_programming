@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-import sys
-import MySQLdb
 
 """
 Write a script that lists all states from the database hbtn_0e_0_usa
 """
+import MySQLdb
+import sys
+
+
 if __name__ == "__main__":
 
     db = MySQLdb.connect(
