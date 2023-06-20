@@ -25,7 +25,8 @@ if __name__ == "__main__":
     session = Session()
 
     found = False
-    for state in session.query(State).filter(State.name.like('{}'.format(sys.argv[4]))):
+    for state in session.query(State).\
+            filter(State.name.like('{}'.format(sys.argv[4]))):
         print("{}".format(state.id))
         found = True
     if found is False:
