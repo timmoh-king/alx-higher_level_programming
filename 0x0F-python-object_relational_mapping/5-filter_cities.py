@@ -21,6 +21,12 @@ if __name__ == "__main__":
                 FROM cities
                 INNER JOIN states
                 ON states.id = cities.state_id
-                WHERE states.name = '{}'""".format(sys.argv[4]))
-    for row in cur.fetchall():
-        print(row)
+                WHERE states.name = '{}'
+                ORDER BY cities.id""".format(sys.argv[4]))
+    cities = cur.fetchall()
+    if cities:
+        city_list = [city[0] for city in cities]
+        city_string = ", ".join(city_list)
+        print(city_string)
+    else:
+        print()
