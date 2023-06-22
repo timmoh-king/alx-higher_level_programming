@@ -28,4 +28,3 @@ if __name__ == "__main__":
         print("{}: ({}) {}".format(instance.name, instance.id, instance.name))
 
     Base.metadata.create_all(engine)
- 
