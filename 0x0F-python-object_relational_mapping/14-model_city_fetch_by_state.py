@@ -5,6 +5,7 @@
 """
 import sys
 from model_state import Base, State
+from model_city import City
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import (create_engine)
 
@@ -24,7 +25,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for instance in session.query(State).join(Cities).order_by(Cities.id):
-        print("{}: ({}) {}".format(instance.name, instance.id, instance.name))
+    for city, state in session.query(City, State).\
+            filter(City.state_id == State.id).\
+            order_by(City.id):
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     Base.metadata.create_all(engine)

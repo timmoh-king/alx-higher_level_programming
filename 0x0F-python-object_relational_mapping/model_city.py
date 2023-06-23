@@ -6,6 +6,7 @@
 """
 
 from model_state import Base
+from sqlalchemy import ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 
@@ -22,4 +23,4 @@ class City(Base):
 
     id = Column(Integer, nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, nullable=False, foreign_key=True)
+    state_id = Column(Integer, ForeignKey("state.id"), nullable=False)
