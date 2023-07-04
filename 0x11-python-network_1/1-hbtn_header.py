@@ -12,6 +12,7 @@ if __name__ == "__main__":
     import sys
 
     url = sys.argv[1]
-    with urllib.request.urlopen(url) as response:
+    request = urllib.request.Request(url)
+    with urllib.request.urlopen(request) as response:
         headers_dict = dict(response.getheaders())
         print(headers_dict['X-Request-Id'])
