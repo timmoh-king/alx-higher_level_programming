@@ -13,4 +13,3 @@ req(apiUrl, (err, res, body) => {
     }, 0));
   }
 });
-
