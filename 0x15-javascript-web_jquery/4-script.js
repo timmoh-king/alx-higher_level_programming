@@ -6,13 +6,13 @@
  * If the current class is red, when the user click on DIV#toggle_header, the class must be updated to green ; and the reverse
  */
 
-const header = $("header");
-const divHeader = $("#toggle_header");
+const header = $('header');
+const divHeader = $('#toggle_header');
 
-divHeader.on("click", function () {
-  if (header.hasClass("green")) {
-    $(header).removeClass("green").addClass("red");
+divHeader.on('click', function () {
+  if (header.hasClass('green')) {
+    $(header).removeClass('green').addClass('red');
   } else {
-    $(header).removeClass("red").addClass("green");
+    $(header).removeClass('red').addClass('green');
   }
 });
